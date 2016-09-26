@@ -1,0 +1,21 @@
+
+
+# [http]
+#         sslVerify = false
+#         proxy = http://host:port
+# [https]
+#         proxy = http://host:port
+# [user]
+#         name = xxx
+#         email = xxx@example.com
+
+
+[alias]
+    st = status
+    di = diff
+    br = branch
+    co = checkout
+    ci = commit
+    
+
+

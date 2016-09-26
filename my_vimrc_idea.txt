@@ -1,0 +1,64 @@
+
+## my_vimrc を作る 
+
+* コーディング時
+* サーバー上の設定ファイルをいじる時
+
+基本的にプラグインはあまり入れない方針 (色々なサーバー上のvimと同じように使えるようにしたいので)。
+ただ、
+* Git 関連のプラグイン (fugitive.vim とか)
+は、後者のときには関係ないため、入れてもいいかも。
+
+==============
+
+set number 
+set showcmd
+
+set tabstop=4 
+set softtabstop=4 
+set shiftwidth=4 
+set expandtab 
+
+set nolist   "" do not display tabs and eol
+"" __OR __  
+"" listchars=tab:>-    "" omit 'eol'
+
+""set incsearch
+set ignorecase 
+set hlsearch 
+
+
+autocmd BufRead *.php\|*.ctp\|*.tpl :set filetype=php dictionary=$HOME/.vim/dict/php.dict foldmethod=marker foldmarker=/*,*/ 
+autocmd BufRead /etc/httpd/* :set filetype=apache 
+autocmd FileType javascript :set dictionary=$HOME/.vim/dict/javascript.dict,$HOME/.vim/dict/jQuery.dict 
+autocmd FileType ruby :set expandtab tabstop=2 shiftwidth=2 softtabstop=0 
+set statusline=%n:% %F\ %m%r%h%w[%{&fileformat}][%{has('multi_byte')&&\ &fileencoding!=''?&fileencoding:&encoding}]%y%=[%4.4B,%3.3c][%5.    5l/%5.5L]\ %3.3p%% 
+
+
+
+"""" Avoid misoperation """"
+nnoremap ZZ <Nop>
+nnoremap ZQ <Nop>
+
+"""" Disable merely-used commands """"
+nnoremap Q <Nop>
+
+
+
+"""" Change Cursor Shape """"
+
+autocmd InsertEnter * set cursorline
+autocmd InsertLeave * set nocursorline
+
+"if has('multi_byte_ime')
+"    highlight Cursor guifg=NONE guibg=Green
+"    highlight CursorIM guifg=NONE guibg=Purple
+"endif
+
+
+"""" Useful Shortcuts """"
+
+command Diff w !diff -u % - 
+
+
+
