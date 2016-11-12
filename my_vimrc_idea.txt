@@ -21,7 +21,7 @@ set expandtab
 
 set nolist   "" do not display tabs and eol
 "" __OR __  
-"" listchars=tab:>-    "" omit 'eol'
+""set listchars=tab:>-    "" omit 'eol'
 
 ""set incsearch
 set ignorecase 
@@ -58,7 +58,7 @@ autocmd InsertLeave * set nocursorline
 
 """" Useful Shortcuts """"
 
-command Diff w !diff -u % - 
+command! Diff w !diff -u % - 
 
 
 
