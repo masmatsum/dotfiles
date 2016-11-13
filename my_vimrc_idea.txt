@@ -27,6 +27,7 @@ set nolist   "" do not display tabs and eol
 set ignorecase 
 set hlsearch 
 
+set backspace=indent,eol,start
 
 autocmd BufRead *.php\|*.ctp\|*.tpl :set filetype=php dictionary=$HOME/.vim/dict/php.dict foldmethod=marker foldmarker=/*,*/ 
 autocmd BufRead /etc/httpd/* :set filetype=apache 
