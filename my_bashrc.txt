@@ -1,9 +1,23 @@
-
-alias la='ls -a'
-# alias ll='ls -l --color=auto --time-style=long-iso'   
-alias ll='ls -l --color=auto --time-style=iso'
-
-alias view='vi -R'
 export HISTIGNORE='pwd:ls:ls -l:ll'
 
+alias view='vi -R'
 
+case ${OSTYPE} in
+  linux*)
+    ;;
+  darwin*)
+    alias ls='ls -G'
+    alias la='ls -aG'
+    alias ll='ls -lG'
+    alias lla='ls -laG'
+    ;;
+  msys)
+    alias ls='ls --color=auto'
+    alias la='ls -a --color=auto'
+    # Choose --time-style=iso _OR_ --time-style=long-iso
+    alias ll='ls -l --color=auto --time-style=iso'
+    alias lla='ls -la --color=auto --time-style=iso'
+    ;;
+  cygwin)
+    ;;
+esac
