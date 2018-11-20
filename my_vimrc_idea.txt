@@ -20,8 +20,9 @@ set shiftwidth=4
 set expandtab 
 
 set nolist   "" do not display tabs and eol
-"" __OR __  
-""set listchars=tab:>-    "" omit 'eol'
+"" __OR __
+""set list
+""set listchars=tab:>-
 
 ""set incsearch
 set ignorecase 
