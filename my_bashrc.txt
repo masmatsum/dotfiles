@@ -1,6 +1,14 @@
-export HISTIGNORE='pwd:ls:ls -l:ll'
+is_regular_readable_file() {
+  local file=$1
+  if test -f "$file" && test -r "$file"; then
+    return 0
+  fi  
+  return 1
+}
 
 alias view='vi -R'
+
+
 
 case ${OSTYPE} in
   linux*)
@@ -10,7 +18,7 @@ case ${OSTYPE} in
     alias la='ls -aG'
     alias ll='ls -lG'
     alias lla='ls -laG'
-    test -f ~/functions_mac.sh && test -r ~/functions_mac.sh && . ~/functions_mac.sh  
+    is_regular_readable_file ~/functions_mac.sh && . ~/functions_mac.sh
     ;;
   msys)
     alias ls='ls --color=auto'
