@@ -10,7 +10,7 @@ case ${OSTYPE} in
     alias la='ls -aG'
     alias ll='ls -lG'
     alias lla='ls -laG'
-    test -r ~/functions_mac.sh && . ~/functions_mac.sh
+    test -f ~/functions_mac.sh && test -r ~/functions_mac.sh && . ~/functions_mac.sh  
     ;;
   msys)
     alias ls='ls --color=auto'
