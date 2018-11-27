@@ -1,8 +1,6 @@
 
-
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
 
-
-
+export HISTIGNORE='pwd:ls:ls -l:ll'
