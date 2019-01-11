@@ -6,6 +6,10 @@ is_regular_readable_file() {
   return 1
 }
 
+finddocuments() {
+  find ~/Documents -name '*'"$1"'*'
+}
+
 alias view='vi -R'
 
 
