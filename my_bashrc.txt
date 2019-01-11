@@ -20,6 +20,7 @@ case ${OSTYPE} in
   darwin*)
     alias ls='ls -G'
     alias la='ls -aG'
+    alias l1='ls -1G'
     alias ll='ls -lG'
     alias lla='ls -laG'
     is_regular_readable_file ~/functions_mac.sh && . ~/functions_mac.sh
@@ -27,6 +28,7 @@ case ${OSTYPE} in
   msys)
     alias ls='ls --color=auto'
     alias la='ls -a --color=auto'
+    alias l1='ls -1 --color=auto'
     # Choose --time-style=iso _OR_ --time-style=long-iso
     alias ll='ls -l --color=auto --time-style=iso'
     alias lla='ls -la --color=auto --time-style=iso'
