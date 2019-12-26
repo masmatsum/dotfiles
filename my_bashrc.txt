@@ -10,6 +10,38 @@ finddocuments() {
   find ~/Documents -name '*'"$1"'*'
 }
 
+# List all changed files in all git repositories in a directory
+_git_all_repo_diff_status() {
+  parent_dir=$1
+
+  pushd "$parent_dir" > /dev/null
+  for dir in *
+  do
+    if [ ! -d "$dir" ]; then
+      continue
+    fi
+    cd "$dir"
+    if [ ! -d .git ]; then
+      cd ..
+      continue
+    fi
+    status=$(git status --short)
+    if [ -z "$status" ]; then
+      cd ..
+      continue
+    fi
+    echo "============ $dir ============"
+    git status --short
+    echo
+    cd ..
+  done
+  popd > /dev/null
+}
+
+#git_all_repo_diff_status() {
+#  _git_all_repo_diff_status {SOME_PROJECT_DIR}
+#}
+
 alias view='vi -R'
 
 
