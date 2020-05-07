@@ -42,6 +42,23 @@ _git_all_repo_diff_status() {
 #  _git_all_repo_diff_status {SOME_PROJECT_DIR}
 #}
 
+
+# Generate .gif from .mov
+# Example: 
+#   generate_gif 'input.mov' 'output.gif' 'palette.png'
+# 
+# ※ffmpeg が必要。(Mac なら `brew install ffmpeg`)
+# 参考にしたページ: https://qiita.com/takasp/items/65d1d0d90073bcfc4873
+generate_gif() {
+  local input_mov=$1
+  local output_gif=$2
+  local palette=$3 # 生成する palette
+
+  ffmpeg -i "$input_mov" -vf "palettegen" -y "$palette"
+  ffmpeg -i "$input_mov" -i "$palette" -r 24 -y "$output_gif"
+}
+
+
 alias view='vi -R'
 
 
