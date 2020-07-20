@@ -47,7 +47,8 @@ _git_all_repo_diff_status() {
 # Example: 
 #   generate_gif 'input.mov' 'output.gif' 'palette.png'
 # 
-# ※ffmpeg が必要。(Mac なら `brew install ffmpeg`)
+# Note: You need `ffmpeg` command (Run `brew install ffmpeg` for macOS to install)
+#
 # 参考にしたページ: https://qiita.com/takasp/items/65d1d0d90073bcfc4873
 generate_gif() {
   local input_mov=$1
