@@ -88,3 +88,6 @@ case ${OSTYPE} in
   cygwin)
     ;;
 esac
+
+# ------------- Project-specific settings --------------
+is_regular_readable_file ~/.my_bashrc_for_proj.sh && . ~/.my_bashrc_for_proj.sh
