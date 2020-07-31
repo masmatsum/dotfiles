@@ -14,10 +14,12 @@
 
 
 [alias]
-    st = status
-    di = diff
-    br = branch
-    co = checkout
-    ci = commit
-    sm = submodule
+	st = status
+	di = diff
+	br = branch
+	co = checkout
+	ci = commit
+	sm = submodule
 
+[merge]
+	conflictStyle = diff3
