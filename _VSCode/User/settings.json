@@ -1,0 +1,53 @@
+{
+  "editor.find.cursorMoveOnType": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "on",
+  "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 1,
+  "window.title": "${activeEditorShort} ${separator} ${activeFolderMedium} ${separator} ${rootName}",
+  "editor.tabSize": 2,
+  "todohighlight.defaultStyle": {
+      "color": "#38d989",
+      "backgroundColor": "#222",
+      "overviewRulerColor": "#ffab00",
+  },
+  // キーワード一覧。スタイルも指定可能。
+  // 文字列として指定したキーワードには "todohighlight.defaultStyle" のスタイルが適用される
+  // 注意: 最初から定義されているキーワード ("TODO:", "FIXME:") のスタイルを上書きしたい場合、文字列ではダメ ("todohighlight.defaultStyle" は効かない)
+  "todohighlight.keywords": [
+      "TEMP:",
+      {
+          "text": "TODO:",
+          "color": "#38d989",
+          "backgroundColor": "#222",
+      },
+      {
+          "text": "FIXME",
+          "color": "#FFF",
+          "backgroundColor": "#e808ab"
+      }
+
+      // {
+      //     "text": "DEBUG:",
+      //     "color": "#FFFFFF",
+      //     "backgroundColor": "#dd5706"
+      // },
+      // {
+      //     "text": "NOTE:",
+      //     "color": "#FFFFFF",
+      //     "backgroundColor": "#2741a0"
+      // },
+      // {
+      //     "text": "HACK:",
+      //     "color": "#FFFFFF",
+      //     "backgroundColor": "#a0275d"
+      // },
+      // {
+      //   "text": "TEMP:",
+      //   "color": "#FFF",
+      //   "backgroundColor": "#30730f"
+      // },
+  ],
+  "search.searchOnType": false,
+  "search.showLineNumbers": true,
+}
