@@ -75,6 +75,7 @@ case ${OSTYPE} in
     alias lla='ls -laG'
     alias date-iso-8601='date +"%Y-%m-%dT%H:%M:%S%z"'
     alias date-iso-8601-utc='date -u +"%Y-%m-%dT%H:%M:%SZ"'
+    alias beep-multi='printf "\a\a\a\a\a"'
     is_regular_readable_file ~/.my_functions_mac.sh && . ~/.my_functions_mac.sh
     ;;
   msys)
