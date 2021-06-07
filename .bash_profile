@@ -7,3 +7,7 @@ fi
 
 export PATH=${PATH}:$HOME/bin
 export HISTIGNORE='pwd:ls:ls -l:ll'
+
+
+# ----- Project Specific Settings -----
+
