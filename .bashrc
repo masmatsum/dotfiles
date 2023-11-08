@@ -61,7 +61,7 @@ generate_gif() {
 
 
 alias view='vi -R'
-
+alias echo-path-pretty='echo "$PATH" | tr : "\n"'
 
 
 case ${OSTYPE} in
