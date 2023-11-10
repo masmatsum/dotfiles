@@ -76,7 +76,7 @@ case ${OSTYPE} in
     alias date-iso-8601='date +"%Y-%m-%dT%H:%M:%S%z"'
     alias date-iso-8601-utc='date -u +"%Y-%m-%dT%H:%M:%SZ"'
     alias beep-multi='printf "\a\a\a\a\a"'
-    is_regular_readable_file ~/.my_functions_mac.sh && . ~/.my_functions_mac.sh
+    is_regular_readable_file ~/.my_functions_mac.sh && source ~/.my_functions_mac.sh
     ;;
   msys)
     alias ls='ls --color=auto'
@@ -91,4 +91,4 @@ case ${OSTYPE} in
 esac
 
 # ------------- Project-specific settings --------------
-is_regular_readable_file ~/.my_bashrc_for_proj.sh && . ~/.my_bashrc_for_proj.sh
+is_regular_readable_file ~/.my_bashrc_for_proj.sh && source ~/.my_bashrc_for_proj.sh
