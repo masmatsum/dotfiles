@@ -13,37 +13,44 @@
 	// 	"description": "Log output to console"
 	// }
 
-	// Memo: 元々ある snippet を上書き。改行が入らないようにする。
+	// Note: 元々ある snippet を上書き。改行が入らないようにする。
 	"Print to console": {
 		"prefix": "log",
 		"body": [
 			"console.log('$1');$0",
 		],
-		"description": "Log output to console"
+		"description": "console.log string"
 	},
 
-	"Print 1": {
-		"prefix": "logx",
+	"Print to console 2": {
+		"prefix": "logs",
 		"body": [
-			// Memo: Symbol の値を正しく表示するためには明示的な `String()` が必要。(備考: JSON.stringify($1)})
-			"console.log(`$1: ${String($1)}`);$0",
+			"console.log('$1');$0",
 		],
-		"description": "Log output to console"
+		"description": "console.log string"
 	},
 
-	// Memo: Symbol, Map の値を表示する用途では使えない
+	"Print value 1": {
+		"prefix": "logv",
+		"body": [
+			"console.log('$1', $1);$0",
+		],
+		"description": "console.log value with label"
+	},
+
+	// Note: Symbol, Map の値を表示する用途では使えない
 	// - `JSON.stringify(Symbol('foo'))` は undefined を返す
 	// - `let map = new Map([['key1', 'value1'], ['key2', 'value2']]); JSON.stringify(map);` は "{}" を返す
 	"Print 2": {
-		"prefix": "logjson",
+		"prefix": "log_json",
 		"body": [
-			"console.log(`$1: ${JSON.stringify($1)}`);$0",
+			"console.log('$1', JSON.stringify($1));$0",
 		],
 		"description": "Log output to console"
 	},
 
 	"Clone 1": {
-		"prefix": "clone_by_json",
+		"prefix": "clone_by_json_stringify",
 		"body": [
 			"JSON.parse(JSON.stringify($1))",
 		],
