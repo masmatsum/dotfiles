@@ -8,3 +8,6 @@ PowerShellのデフォルト（`TabCompleteNext`）では、入力キーにマ�
 `Complete`にすると、bash同様の振る舞いになる
 #>
 # Set-PSReadlineKeyHandler -Key Tab -Function Complete
+
+# mise
+# (&mise activate pwsh) | Out-String | Invoke-Expression
