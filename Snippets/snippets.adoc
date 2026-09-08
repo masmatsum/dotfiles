@@ -1,0 +1,10 @@
+
+=== HTML details summary
+ 
+```
+<details>
+  <summary>xxxxはこちら（クリックして開閉）</summary>
+  Lorem ipsum dolor sit amet, ... 
+</details>
+```
+
