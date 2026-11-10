@@ -1,6 +1,9 @@
-#[user]
-#        email = masmatsum@users.noreply.github.com
-#	 name = masmatsum
+[user]
+	name = masmatsum
+	email = 8317204+masmatsum@users.noreply.github.com
+
+[core]
+	autocrlf = false
 
 
 # [http]
